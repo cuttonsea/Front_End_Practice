@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>scrollPage</title>
+
+	<link rel="stylesheet" href="scroll/style.css">
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+	<script type="text/javascript" src="scroll/script.js"></script>
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+</head>
+<body>
+	<div id="wrap">
+		<header>
+			<ul>
+				<li>Section1</li>
+				<li>Section2</li>
+				<li>Section3</li>
+			</ul>
+		</header>
+
+		<div id="contents">
+			<div id="page1">Section1</div>
+			<div id="page2">Section2</div>
+			<div id="page3">Section3</div>
+		</div>
+
+		<ul id="btn">
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+
+		<div id="side">
+			<h2><span>&gt;</span><span>&lt;</span></h2>
+			<ul>
+				<li class="btn_login"><span class="material-symbols-outlined">login</span></li>
+				<li><span class="material-symbols-outlined">search</span></li>
+				<li><span class="material-symbols-outlined">settings</span></li>
+			</ul>
+			<p>Copyrights aaa. All Rights Reserved.</p>
+		</div>
+
+		<div id="modal_bg"></div>
+		<div id="modal_login">
+			<h2>로그인</h2>
+			<form autocomplete="off">
+				<ul>
+					<li><input type="text" title="아이디" placeholder="아이디" id="user_id"></li>
+					<li><input type="password" title="비밀번호" placeholder="비밀번호" id="user_pw"></li>
+				</ul>
+				<p> 
+					<input type="checkbox" id="log">
+					<label for="log">로그인 상태 유지 </label>
+				</p>
+				<p><input type="submit" value="로그인"></p>
+			</form>
+			<ul id="join">
+				<li><a href="#">비밀번호 찾기</a></li>
+				<li><a href="#">아이디 찾기</a></li>
+				<li><a href="#">회원가입</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
