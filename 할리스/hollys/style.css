@@ -1,0 +1,358 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+@font-face {
+	font-family: 'S-CoreDream-3Light';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+body{
+	font-family: 'S-CoreDream-3Light';
+	font-size: 12px;
+	color:#333;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+img{
+	vertical-align: middle;
+}
+
+#wrap{
+	width:100%;
+	porition: relative;
+}
+.inner{
+	width: 940px;
+	margin:0 auto;
+}
+
+#wrap header{
+	width: 100%;
+	height: 148px;
+	border-bottom:2px solid darkred;
+	padding-top: 10px;
+	position: relative;
+}
+header h1{
+	text-align: center;
+	margin-bottom: 10px;
+}
+header #menu{
+	overflow: hidden;
+}
+header #menu li{
+	float:left;
+	width: 156.6px;
+	text-align: center;
+	padding: 10px 0;
+}
+header #menu li:hover{
+	background-color: darkred;
+	color:#fff;
+}
+header #menu li a{
+	font-weight: bold;
+	font-size: 18px;
+}
+header #menu li:hover a{
+	color:#fff;
+}
+header #menu li span{
+	display: block;
+	margin-top: 5px;
+	color:#666;
+	opacity:0;
+}
+header #menu li:hover span{
+	color:#fff;
+	opacity: 1;
+}
+header #sub{
+	width:100%;
+	background-color: #333;
+	position: absolute;
+	left:0;
+	top:146px;
+	padding: 20px 0 50px 0;
+	display: none;
+	z-index: 5;
+}
+header #sub ul{
+	float: left;
+	width: 156.6px;
+	text-align: center;
+}
+header #sub ul li a{
+	color: #777;
+	display: block;
+	padding: 5px 0;
+	font-size: 14px;
+}
+header #sub ul li a:hover{
+	color:#fff;
+}
+
+#wrap #banner{
+	width: 100%;
+	height: 480px;
+	overflow: hidden;
+	position: relative;
+}
+#banner #banner_image{
+	width: 7680px;
+	position: relative;
+	overflow: hidden;
+}
+#banner #banner_image li{
+	float: left;
+}
+#banner #banner_btn {
+	overflow: hidden;
+	position: absolute;
+	bottom:20px;
+	left:50%;
+	margin-left: -35px;
+}
+#banner #banner_btn li{
+	width: 10px;
+	height: 10px;
+	background-color: #999;
+	margin-right: 10px;
+	float: left;
+	border-radius: 5px;
+	cursor: pointer;
+}
+#banner #banner_btn li:last-child{
+	margin-right: 0;
+}
+#banner #banner_btn li.on{
+	background-color: darkred;
+}
+
+#wrap #fade{
+	width: 100%;
+	height: 480px;
+	overflow: hidden;
+	position: relative;
+}
+#fade #fade_image{
+	position:relative;
+}
+#fade #fade_image li{
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+#fade #fade_btn {
+	overflow: hidden;
+	position: absolute;
+	bottom:20px;
+	left:50%;
+	margin-left: -35px;
+}
+#fade #fade_btn li{
+	width: 10px;
+	height: 10px;
+	background-color: #999;
+	margin-right: 10px;
+	float: left;
+	border-radius: 5px;
+	cursor: pointer;
+}
+#fade #fade_btn li:last-child{
+	margin-right: 0;
+}
+#fade #fade_btn li.red{
+	background-color: darkred;
+}
+
+#tab{
+	width: 100%;
+	padding: 50px 0;
+	height: 500px;
+}
+#tab #tab_btn{
+	width: 450px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+#tab #tab_btn li{
+	float: left;
+	width: 150px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 20px 0;
+	cursor: pointer;
+	border-bottom: 2px solid #ddd;
+}
+#tab #tab_btn li.selected{
+	border-bottom: 2px solid red;
+}
+
+#tab #tab_con{
+	width: 100%;
+	margin-top: 30px;
+	position: relative;
+}
+#tab #tab_con > div{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+#tab #tab_con #hollys #hollys_tab{
+	overflow: hidden;
+}
+#hollys li{
+	float: left;
+}
+#hollys li#hollys_mall{
+	width: 475px;
+	padding: 0 20px;
+}
+#hollys h1{
+	background-color: #faf9f7;
+	padding-top: 20px;
+	padding-left: 15px;
+	font-size: 20px;
+}
+#hollys h1 .material-symbols-outlined{
+	font-size: 20px;
+	line-height: 20px;
+	margin-top: 5px;
+}
+#hollys #hollys_mall h1{
+	color: red;
+	background-color: transparent;
+	margin-bottom: 10px;
+}
+#hollys #hollys_mall p{
+	padding-left: 15px;
+}
+#hollys #hollys_mall #menu{
+	overflow: hidden;
+	margin-top: 30px;
+}
+#hollys #hollys_mall #menu li{
+	float: left;
+	width: 145px;
+	text-align: center;
+	border-right: 1px solid gray;
+	padding: 0 20px;
+}
+#hollys #hollys_mall #menu li:last-child{
+	border: none;
+}
+#hollys #hollys_mall #menu li img{
+	width: 100px;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+#tab #tab_con #membership{
+	width: 100%;
+	overflow: hidden;
+}
+#membership img{
+	float: left;
+}
+#membership img:last-child{
+	float: right;
+}
+
+#tab #tab_con #Community{
+	width: 100%;
+	overflow: hidden;
+}
+#Community dl{
+	float: left;
+	width: 205px;
+	margin-right: 40px;
+}
+#Community dl dt{
+	font-weight: bold;
+	font-size: 15px;
+	margin: 10px 0;
+}
+#Community dl dd{
+	line-height: 20px;
+	overflow: hidden;
+}
+#Community dd span{
+	display: inline-block;
+	width: 150px;
+	white-space: nowrap;
+	overflow: hidden;
+	float: left;
+	text-overflow: ellipsis;
+}
+#Community dd b{
+	float: right;
+	font-weight: normal;
+}
+#Community ul{
+	float: right;
+	overflow: hidden;
+	margin-top: 20px;
+}
+#Community ul li{
+	width: 70px;
+	border-right: 1px solid #eee;
+	padding: 10px;
+	text-align: center;
+	float: left;
+}
+#Community ul li:last-child{
+	border: none;
+}
+#Community ul li img{
+	display: block;
+	margin: 0 auto;
+	width: 50%;
+	margin-bottom: 10px;
+}
+
+#modal_bg{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.8);
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: none;
+}
+#modal{
+	width: 782px;
+	height: 430px;
+	position: fixed;
+	left: 50%;
+	margin-left: -391px;
+	top: 50%;
+	margin-top: -215px;
+	display: none;
+}
+#modal a{
+	background-color: darkred;
+	font-size: 24px;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	color: #fff;
+	position: absolute;
+	right: -25px;
+	top: -25px;
+	display: block;
+	line-height: 50px;
+	text-align: center;
+}
