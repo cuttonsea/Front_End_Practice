@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>animation</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		div{
+			width: 200px;
+			height: 200px;
+			border: 1px solid #000;
+			margin: 30px;
+		}
+		.box1{
+			background-color: orange;
+			animation: aa 5s infinite alternate;
+		}
+		@keyframes aa{
+			0%{width: 100px;}
+			100%{width: 800px;}
+		}
+		.box2{
+			background-color: pink;
+			animation:bb 3s;
+		}
+		@keyframes bb{
+			0%{
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+			}
+			100%{
+				width:600px;
+				height: 400px;
+				background-color: purple;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>animation</h1>
+	<p>키프레임 규칙을 사용해서 움직이는 동작을 만듦</p>
+
+	<h2>animation:name duration timing-function delay count direction;</h2>
+
+	<h3>*name 키프레임 규칙의 이름</h3>
+	<p>@keyframes name{ }</p>
+	<div class="box1"></div>
+	<div class="box2">가로 600/세로 400/핑크~보라..3초</div>
+
+	<h3>count 반복횟수</h3>
+	<p>한 번 재생(기본값) / 숫자 1, 2.. / 무한반복 infinite</p>
+
+	<h3>direction 진행방향</h3>
+	<p>normal(기본값) - 처음(0%) → 끝(100%)</p>
+	<p>alternate - 처음(0%) → 끝(100%) → 처음(0%)</p>
+</body>
+</html>

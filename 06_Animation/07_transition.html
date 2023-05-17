@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>transition</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		body{
+			height: 3000px;
+		}
+		h2, h3{
+			margin-top: 30px;
+		}
+		div{
+			width: 200px;
+			height: 200px;
+			border: 1px solid #000;
+			margin: 30px;
+		}
+		.box1{
+			transition: width 2s cubic-bezier(0,.87,.59,-0.57);
+		}
+		.box1:hover{
+			width: 800px;
+		}
+
+		.box2{
+			background-color: red;
+			transition: background-color 1s 3s;
+		}
+		.box2:hover{
+			background-color: yellowgreen;
+		}
+
+		.box3{
+			background-color: yellow;
+			/*transition: background-color 2s, width 2s, height 2s, border 2s;*/
+			transition: all 2s;
+		}
+		.box3:hover{
+			background-color: blue;
+			width: 600px;
+			height: 400px;
+			border: 5px solid orange;
+		}
+
+		h4{
+			font-size: 48px;
+			margin-top: 30px;
+		}
+		#menu{
+			overflow: hidden;
+		}
+		#menu li{
+			float:left;
+			list-style: none;
+		}
+		#menu li a{
+			font-size: 24px;
+			background-color: skyblue;
+			text-decoration: none;
+			width: 200px;
+			display: block;
+			text-align: center;
+			padding: 10px 0;
+			color:navy;
+			transition: all 1s;
+		}
+		#menu li a:hover{
+			background-color:navy;
+			color: skyblue;
+		}
+
+		#over{
+			width: 782px;
+			height: 430px;
+			overflow: hidden;
+		}
+		#over img{
+			transition: transform 1s;
+		}
+		#over:hover img{
+			transform: scale(1.1);
+		}
+
+		#ex{
+			overflow: hidden;
+		}
+		#ex li{
+			float:left;
+			list-style: none;
+		}
+		#ex li a{
+			font-size: 24px;
+			text-decoration: none;
+			width: 200px;
+			height: 50px;
+			display: block;
+			text-align: center;
+			padding: 10px 0;
+			color:#fff;
+			transition: height 1s cubic-bezier(0,.57,.86,.13);
+		}
+		#ex li:first-child a{
+			background-color: red;
+		}
+		#ex li:nth-child(2) a{
+			background-color: orange;
+		}
+		#ex li:last-child a{
+			background-color: yellowgreen;
+		}
+		#ex li a:hover{
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<h1>transition</h1>
+	<p>동작과 함께 움직이는 효과를 적용</p>
+
+	<h2>transition:property duration timing-function delay;</h2>
+
+	<h3>*property 속성</h3>
+	<ul>
+		<li>위치 - top / right / bottom / left</li>
+		<li>변형 - transform(translate / scale / rotate / skew)</li>
+		<li>크기 - width / height</li>
+		<li>색상 - color / background-color</li>
+		<li>테두리 - border</li>
+		<li>투명도 - opacity</li>
+	</ul>
+
+	<h3>*duration 재생시간</h3>
+	<p>초단위를 사용(2초-2s)</p>
+
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3">배경색 노~파 / 가로 200-600 / 세로 200-400 / 테두리 5 오렌지</div>
+
+	<h4>Transition-menu</h4>
+	<ul id="menu">
+		<li><a href="#">NAVER</a></li>
+		<li><a href="#">DAUM</a></li>
+		<li><a href="#">NATE</a></li>
+	</ul>
+
+	<h4>Image-over</h4>
+	<p id="over"><img src="images/image1.jpg" alt="이미지"></p>
+
+	<h3>timing-function 수치변형함수</h3>
+	<p>움직임의 동작에 가속도(중력)의 값을 추가</p>
+	<p>ease(기본값) / linear / ease-in / ease-out / ease-in-out</p>
+	<p>https://cubic-bezier.com</p>
+
+	<h3>delay 대기시간</h3>
+	<p>초단위를 사용(2초-2s)</p>
+
+	<ul id="ex">
+		<li><a href="#">NAVER</a></li>
+		<li><a href="#">DAUM</a></li>
+		<li><a href="#">NATE</a></li>
+	</ul>
+
+</body>
+</html>

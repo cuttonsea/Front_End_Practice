@@ -1,0 +1,87 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+li{
+	list-style: none;
+}
+body{
+	background-image: url(wood_pattern.jpg);
+}
+
+#wrap{
+	background-image: url(background.png);
+	width: 720px;
+	height: 300px;
+	margin:50px auto;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+	position: relative;
+	/*overflow: hidden;*/
+}
+ 
+#wave{
+	height: 300px;
+	position: relative;
+}
+#wave .back{
+	background-image: url(water-back.png);
+	width: 1000px;
+	height: 84px;
+	position: absolute;
+	bottom:10px;
+	left:-140px;
+}
+#wave .front{
+	background-image: url(water-front.png);
+	width: 1000px;
+	height: 158px;
+	position: absolute;
+	bottom:-75px;
+	left:-140px;
+}
+
+#clouds{
+	position: absolute;
+	left:0;
+	top:0;
+}
+#clouds ul{
+	width: 720px;
+}
+#clouds .c1{
+	position:absolute;
+	left:0;
+	top:0;
+}
+#clouds .c2{
+	position:absolute;
+	left:720px;
+	top:0;
+}
+#clouds li:first-child{
+	position: absolute;
+	left:40px;
+	top:10px;
+}
+#clouds li:nth-child(2){
+	position: absolute;
+	left:300px;
+	top:-20px;
+}
+#clouds li:last-child{
+	position: absolute;
+	left:550px;
+	top:-5px;
+}
+
+#boat{
+	position: absolute;
+	left:20px;
+	top:50px;
+}
+#boat dd{
+	position: absolute;
+	top:-30px;
+	right:30px;
+}
